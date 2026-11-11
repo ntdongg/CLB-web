@@ -1,0 +1,69 @@
+/* Khai báo biến màu dùng chung (Yêu cầu đề cương) */
+:root {
+    --primary-color: #2563eb;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-color: #1f2937;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Định dạng khung chứa danh sách */
+#activityList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto; /* Căn giữa màn hình */
+}
+
+/* Định dạng từng thẻ hoạt động (Card) */
+#activityList li {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Định dạng nút Đăng ký */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Responsive: Tự động đổi giao diện khi xem trên màn hình nhỏ (Mobile-first) */
+@media (max-width: 480px) {
+    #activityList li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    button {
+        width: 100%; /* Nút bấm tràn viền trên điện thoại */
+    }
+}

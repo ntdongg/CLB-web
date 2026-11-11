@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa Hoạt động</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav style="text-align: center; margin-bottom: 20px;">
+        <a href="/admin.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">← Quay lại Quản trị</a>
+    </nav>
+    
+    <h1 style="text-align: center;">Chỉnh sửa Hoạt động</h1>
+    
+    <div style="max-width: 600px; margin: 0 auto; background: var(--card-bg); padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <form id="editActivityForm" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" id="title" placeholder="Tên hoạt động" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" id="description" placeholder="Mô tả ngắn" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" id="location" placeholder="Địa điểm" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="datetime-local" id="start_at" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="number" id="capacity" placeholder="Sức chứa" required min="1" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <button type="submit" style="background-color: #eab308;">Cập Nhật Thay Đổi</button>
+        </form>
+    </div>
+
+    <script type="module" src="/js/admin-edit.js"></script>
+</body>
+</html>
